@@ -1,0 +1,148 @@
+.mainWrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  width: 100%;
+  position: relative;
+  top: 0;
+  margin: 0;
+}
+
+.YTandArchieves {
+  width: 100%;
+  background-color: var(--font-color);
+  position: relative;
+  top: 0;
+  margin: 0;
+  padding-top: 5rem;
+}
+.youtube {
+  display: block;
+  color: var(--third-color);
+  font: 800 2rem var(--main-font);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font: 800 2rem var(--main-font);
+  padding-top: var(--large-spacing-mobile);
+}
+
+.lastVideo {
+  display: block;
+  height: 90vw;
+  display: block;
+  width: 90vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto var(--xlarge-spacing-mobile);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archieves {
+  max-width: 300px;
+  margin: var(--large-spacing-mobile) auto;
+}
+
+.playButton {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-size: 6rem 6rem;
+  background-position: center;
+  background-image: url("/images/play.svg");
+  box-shadow: 1px 1px 5px 1px var(--third-color),
+    -1px -1px 5px 1px var(--third-color);
+  cursor: pointer;
+}
+
+.playButton:hover {
+  transform: scale(0.9);
+  transition: transform 300ms ease-in;
+}
+
+@media only screen and (min-width: 650px) {
+  .YTandArchieves {
+    padding: 7rem 0 2rem 0;
+  }
+  .youtube {
+    font: 800 2.5rem var(--main-font);
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font: 800 2.5rem var(--main-font);
+    padding: var(--large-spacing-desktop) 0;
+  }
+
+  .archieves {
+    margin: var(--large-spacing-mobile) auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto auto;
+  }
+
+  .YTandArchieves {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .youtube {
+    margin-top: 3rem;
+    font: 800 2rem var(--main-font);
+  }
+
+  .title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-top: var(--large-spacing-desktop);
+  }
+
+  .lastVideo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 60vh;
+    width: 80vh;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .archieves {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 5rem auto;
+    max-width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 75% 25%;
+  }
+  .youtube {
+    font: 800 3rem var(--main-font);
+  }
+}

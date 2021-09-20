@@ -1,0 +1,14 @@
+.mainWrapper {
+  width: 100%;
+  background-color: var(--third-color);
+  color: var(--font-color);
+  font: 700 var(--small-font-size-mobile) var(--main-font);
+  margin: 0;
+}
+
+.mainWrapper p {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}

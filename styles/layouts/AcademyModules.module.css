@@ -1,0 +1,155 @@
+.mainWrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+  position: relative;
+}
+
+.leftGrid {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  background-image: url("/images/bells.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  width: 100%;
+  opacity: 0.25;
+  z-index: 1;
+  animation: bkgAnimation 500ms ease-in;
+}
+
+@keyframes bkgAnimation {
+  0% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.rightGrid {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 2;
+}
+
+.rightGrid h1 {
+  position: relative;
+  top: 0;
+  font: 800 3rem var(--main-font);
+  width: 90%;
+  margin: var(--xlarge-spacing-mobile) auto;
+  color: var(--secondary-color);
+  animation: textUp 500ms ease-in;
+}
+
+.rightGrid p {
+  position: relative;
+  top: 0;
+  font: 400 var(--medium-font-size-mobile) var(--main-font);
+  width: 90%;
+  margin: 0 auto;
+  animation: textUp 800ms ease-in;
+}
+
+@keyframes textUp {
+  0% {
+    top: 2rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+.doneButton {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  z-index: 2;
+}
+
+.nextButton {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background-image: url("/images/arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 1px 1px 5px 1px var(--primary-color),
+    -1px -1px 5px 1px var(--primary-color);
+  margin: var(--small-spacing-mobile) 20% var(--small-spacing-mobile) auto;
+  animation: textUp 500ms ease-in;
+}
+
+@media only screen and (min-width: 650px) {
+  .mainWrapper {
+    grid-template-columns: 50% 50%;
+  }
+
+  .rightGrid {
+    grid-column: 1/3;
+  }
+
+  .leftGrid {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+  .rightGrid h1 {
+    text-align: center;
+    margin: 7rem auto var(--xlarge-spacing-mobile);
+  }
+
+  .rightGrid p {
+    text-align: center;
+    margin: 0 auto var(--xlarge-spacing-mobile);
+  }
+  .doneButton {
+    grid-column: 1/3;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .mainWrapper {
+    grid-template-columns: 50% 50%;
+  }
+
+  .rightGrid {
+    grid-column: 2/3;
+  }
+
+  .leftGrid {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+  .rightGrid h1 {
+    text-align: right;
+    margin: 6rem auto var(--xlarge-spacing-mobile);
+    font-size: 4.5rem;
+  }
+
+  .rightGrid p {
+    text-align: right;
+    margin: 0 auto 4rem;
+  }
+
+  .doneButton {
+    grid-column: 1/3;
+    margin: auto;
+    max-width: 28.125rem;
+  }
+
+  .nextButton {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}

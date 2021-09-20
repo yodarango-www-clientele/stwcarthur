@@ -1,0 +1,232 @@
+.mainWrapper {
+  width: 100%;
+  margin: 7rem auto 0;
+}
+
+.grid {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto atuo auto;
+}
+
+.title {
+  position: relative;
+  top: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font: 800 3.8rem var(--main-font);
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto var(--medium-spacing-mobile);
+  position: relative;
+  z-index: 2;
+  animation: textUp 500ms ease-in;
+}
+
+@keyframes textUp {
+  0% {
+    top: 2rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0rem;
+    opacity: 1;
+  }
+}
+
+.image {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  background: url("/images/church-transparent.png");
+  background-size: cover;
+  background-position-x: -10rem;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  position: relative;
+  z-index: 1;
+}
+
+.beliefs {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  position: relative;
+  z-index: 1;
+}
+
+.beliefs > article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 750px;
+  margin: var(--medium-spacing-mobile) auto;
+}
+
+.beliefs article span {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/images/bible.png");
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.beliefs.Bible > span {
+  background-image: url("/images/bible.png");
+}
+
+.beliefs .God > span {
+  background-image: url("/images/God.png");
+}
+
+.beliefs .salvation > span {
+  background-image: url("/images/Heaven.png");
+}
+
+.beliefs .gospel > span {
+  background-image: url("/images/Gospel.png");
+}
+
+.beliefs .living > span {
+  background-image: url("/images/living.png");
+}
+
+.beliefs .future > span {
+  background-image: url("/images/infinite.png");
+}
+
+.beliefs > article > div > p {
+  font: 400 var(--medium-font-size-mobile) var(--main-font);
+  line-height: 2em;
+}
+
+.stdButton {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  z-index: 2;
+  margin: var(--medium-spacing-mobile) auto var(--large-spacing-mobile);
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+}
+@media only screen and (min-width: 650px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .title span {
+    padding-left: 6rem;
+  }
+
+  .beliefs article span {
+    margin-right: 1rem;
+  }
+  .beliefs > article > div > p {
+    font: 400 var(--large-font-size-mobile) var(--main-font);
+    line-height: 2em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .mainWrapper {
+    margin: 9rem auto 0;
+  }
+
+  .grid {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto atuo auto;
+  }
+
+  .title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font: 800 5rem var(--main-font);
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto var(--medium-spacing-desktop);
+    text-align: right;
+  }
+
+  .image {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background: url("/images/church-transparent.png");
+    background-position-x: -10rem;
+    opacity: 1;
+    background-repeat: no-repeat;
+  }
+
+  .beliefs {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    width: 90%;
+    max-width: 750px;
+    height: 75vh;
+    overflow-y: scroll;
+    margin: auto;
+  }
+
+  .beliefs::-webkit-scrollbar {
+    display: block;
+    width: 1rem;
+  }
+
+  .beliefs::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(
+      0deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    border-radius: 1rem;
+  }
+
+  .beliefs::-webkit-scrollbar-track {
+    background-color: var(--font-color);
+    border-radius: 1rem;
+  }
+
+  .beliefs article div h3,
+  .beliefs article div p {
+    width: 100%;
+    text-align: right;
+  }
+
+  .beliefs article div h3 {
+    color: var(--secondary-color);
+    font-size: var(--large-font-size-desktop);
+  }
+
+  .beliefs > article {
+    width: 90%;
+    margin: auto;
+    margin: var(--medium-spacing-desktop) auto;
+    flex-direction: row-reverse;
+  }
+
+  .beliefs article span {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-image: url("/images/bible.png");
+    margin: 0 0.5rem 0 0.5rem;
+  }
+  .stdButton {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    z-index: 2;
+    margin: 5rem auto;
+    position: relative;
+    max-width: 28.125rem;
+  }
+}

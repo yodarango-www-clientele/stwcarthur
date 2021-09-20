@@ -1,0 +1,34 @@
+.mainWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: o;
+  right: 0;
+  background-color: var(--secondary-color);
+  width: 90%;
+  margin: 8rem auto;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.close {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: var(--font-color);
+  background-image: url("/images/close.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.message {
+  font: 200 1rem var(--main-font);
+  color: white;
+  text-align: center;
+}

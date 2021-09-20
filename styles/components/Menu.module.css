@@ -1,0 +1,338 @@
+.mainWrapper {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+}
+
+/* ============ Menu Button ================ */
+.menuWrapperHeader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.3rem 0;
+  z-index: 15;
+  background-color: black;
+}
+
+.menuWrapperHeaderColor {
+  background-color: white;
+}
+
+.instagramIcon,
+.facebookIcon,
+.logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-position: center;
+  background-size: 98%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url("/images/ig-logo-sketch.png");
+}
+
+.facebookIcon {
+  background-image: url("/images/fb-logo-sketch.png");
+  margin: 0 5rem 0 var(--small-spacing-mobile);
+}
+
+.logo {
+  background-image: url("/images/logo.png");
+  margin: 0 2rem 0 var(--small-spacing-mobile);
+  height: 3rem;
+  width: 3rem;
+  background-size: cover;
+}
+
+.menuButton,
+.menuButtonOpen {
+  position: inherit;
+  right: 1rem;
+  top: 1.5rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background-image: url("/images/arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 1px 1px 5px 1px var(--primary-color),
+    -1px -1px 5px 1px var(--primary-color);
+  transform: rotate(180deg);
+  transition: all 100ms ease-in;
+}
+
+.menuButtonOpen {
+  box-shadow: 1px 1px 10px 1px var(--font-color), -1px -1px 10px 1px #a89393;
+  background-image: url("/images/arrow-button-close.png");
+  animation: menuButtonOpen 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: rotate(0deg);
+}
+
+@keyframes menuButtonOpen {
+  0% {
+    box-shadow: 1px 1px 5px 1px var(--primary-color),
+      -1px -1px 5px 1px var(--primary-color);
+    transform: rotate(180deg);
+    background-image: url("/images/arrow.png");
+  }
+  100% {
+    transform: rotate(0deg);
+    background-image: url("/images/arrow-button-close.png");
+    box-shadow: 1px 1px 10px 1px var(--font-color), -1px -1px 10px 1px #a89393;
+  }
+}
+
+.menuButton:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 20px 1px var(--primary-color),
+    -4px -4px 20px 2px var(--primary-color);
+  right: 1.5rem;
+}
+.menuButtonOpen:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px var(--font-color), -1px -1px 10px 1px #a89393;
+  right: 1.5rem;
+}
+
+/* ============ Menu Wrapper ================ */
+
+.menuWrapperClose,
+.menuWrapperOpen,
+.menuWrapper {
+  width: 50vw;
+  max-width: 400px;
+  height: 90vh;
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  background-image: linear-gradient(
+    0deg,
+    var(--third-color),
+    var(--primary-color)
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10% 0.5rem 10% 0;
+  z-index: 14;
+  display: none;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.menuWrapperOpen {
+  display: flex;
+  right: 0;
+  animation: openMenu 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuWrapperClose {
+  display: flex;
+  right: -51vw;
+  animation: closeMenu 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes openMenu {
+  0% {
+    right: -50vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -51vw;
+  }
+}
+
+.menuWrapper a,
+.menuWrapperOpen a {
+  display: block;
+  width: 100%;
+  text-align: right;
+  font: var(--main-font);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  transition: 100ms ease-in;
+}
+
+.menuWrapperOpen a:hover,
+.menuWrapper a:hover {
+  transform: skew(-20deg, 0);
+  color: white;
+}
+
+.chatButton {
+  height: 6.25rem;
+  width: 6.25rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/images/chat-bubbles.png");
+  border-radius: 50%;
+}
+
+.chatButton:hover {
+  animation: gelatine 0.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* ============== Contact Form =============== */
+.contactForm {
+  width: 70vw;
+  height: 70vh;
+  position: fixed;
+  top: 15vh;
+  right: 0;
+  background-color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 3% 0;
+  z-index: 14;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.contactForm input {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font: 100 var(--small-font-size-mobile) var(--main-font);
+  outline: none;
+  caret-color: var(--secondary-color);
+  color: white;
+}
+.contactForm p {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.contactForm textarea {
+  height: 50%;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  border: 1px solid var(--secondary-color);
+  background-color: transparent;
+  resize: none;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  resize: none;
+  font-family: var(--main-font);
+  font-size: var(--small-font-size-mobile);
+  font-weight: 100;
+  padding: 1rem;
+  outline: none;
+  caret-color: var(--secondary-color);
+  color: white;
+}
+
+.sendButton {
+  background: var(--font-color);
+  color: var(--secondary-color);
+  width: 90%;
+}
+
+.errorMessage {
+  color: rgb(209, 66, 66);
+}
+
+/* ============= IPAD ============ */
+@media only screen and (min-width: 600px) {
+  .instagramIcon,
+  .facebookIcon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .facebookIcon {
+    margin: 0 6rem 0 var(--small-spacing-mobile);
+  }
+
+  .contactForm {
+    max-width: 500px;
+  }
+
+  .menuWrapper a,
+  .menuWrapperOpen a {
+    font-size: 4rem;
+  }
+
+  .contactForm {
+    max-width: 500px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: var(--medium-font-size-mobile);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .menuButton,
+  .menuButtonOpen {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .instagramIcon,
+  .facebookIcon,
+  .logo {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .facebookIcon {
+    margin: 0 10rem 0 var(--large-spacing-desktop);
+  }
+
+  .menuWrapper a,
+  .menuWrapperOpen a {
+    font-size: 5rem;
+    padding-right: 2rem;
+  }
+  .chatButton {
+    margin-right: 2rem;
+  }
+}

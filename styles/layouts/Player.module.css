@@ -1,0 +1,38 @@
+.mainWrapper {
+  position: fixed;
+  z-index: 16;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainWrapper iframe {
+  display: block;
+  width: 90vw;
+  height: 90vw;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.close {
+  width: 5rem;
+  height: 5rem;
+  background-image: url("/images/close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(0.8);
+  transition: transform 300ms ease-in;
+}
