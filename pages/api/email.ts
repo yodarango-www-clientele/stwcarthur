@@ -1,8 +1,6 @@
 //import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail from "@sendgrid/mail";
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(`${process.env.SENDGRID_API_KEY}`);
 
 export default async function getVideos(req: any, res: any) {
   const msg = {
