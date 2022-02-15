@@ -6,6 +6,7 @@ import Link from "next/link";
 // components
 import Menu from "../components/menu";
 import Footer from "../components/footer";
+import HeadTag from "../layouts/HeadTag";
 
 // styles
 import homeStyles from "../styles/pages/Home.module.css";
@@ -57,12 +58,14 @@ const Home: NextPage = () => {
   };
 
   return (
+    
     <div className={homeStyles.mainWrapper}>
+      <HeadTag title={`Spirit and Truth Worship Center | Home`} description={'Are you around the Cumberland Gap area? come visit us for some apostolic preaching and a wartm welcoming!'} ogUrl={`https://stwcarthur.org`} key={'Home'}/>
       <Menu />
       <video autoPlay loop muted playsInline className={homeStyles.videoBkg}>
-        <source src='/video/videoBkg.mp4' />
+        <source src='https://res.cloudinary.com/stecarthur-org/video/upload/v1644933485/video-intro-stwc_2_xdllo3.mp4' />
       </video>
-
+      
       <section className={homeStyles.weAreSTWCWrapper}>
         <h1 className={homeStyles.weAre}>
           <span className={homeStyles.w}>W</span>
@@ -133,9 +136,9 @@ const Home: NextPage = () => {
 
         {!tscaModuleState && (
           <section className={`${homeStyles.tscaAddWrapper}`}>
-            <h2 className={`${homeStyles.wisdom}`}>WISDOM</h2>
-            <h2 className={`${homeStyles.integrity}`}>INTEGRITY</h2>
-            <h2 className={`${homeStyles.excellence}`}>EXCELLENCE</h2>
+            <h2 className={`${homeStyles.wisdom}`}></h2>
+            <h2 className={`${homeStyles.integrity}`}></h2>
+            <h2 className={`${homeStyles.excellence}`}></h2>
             <button
               className={`std-button ${homeStyles.stdButtonAcademy}`}
               onClick={showTSCAModule}

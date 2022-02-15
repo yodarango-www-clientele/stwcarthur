@@ -184,9 +184,10 @@
   height: 40.625rem;
   width: 100%;
   background-image: url("/images/tsca-bkg.png");
+  background-color: #F1F1F1; 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: ceover;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -217,11 +218,11 @@
   text-align: right;
 }
 .stdButtonAcademy {
-  margin: 0 atuo;
+  margin: var(--medium-spacing-mobile) auto;
   font-size: 0.8rem;
   padding: 1rem 0;
+  box-shadow: 1px 1px 5px 1px var(--third-color), -1px -1px 5px 1px var(--third-color);
 }
-
 /* ================== DOWNLOAD THE APP SECTION ============ */
 .downloadAppWrapper {
   width: 100%;

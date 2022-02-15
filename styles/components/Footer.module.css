@@ -12,3 +12,8 @@
   text-align: center;
   padding: 1rem 0;
 }
+
+.footerAtag{
+  text-decoration: underline;
+  color: white;
+}

@@ -27,12 +27,10 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
         <div className={`${academyWisdomStyles.mainWrapper}`}>
           <div className={`${academyWisdomStyles.leftGrid}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
-            <h1>POINT NUMBER ONE</h1>
+            <h1>WISDOM</h1>
             <p className={academyWisdomStyles.description}>
-              The finalists for Best Awards 2021 have been announced and we are
-              so excited that our work for Youthforia made the list. We are
-              finalists in 5 categories - colour, photography, 3D, identity and
-              packaging. Winners are announced 8th October, wish us luck!
+              At Tri-State Christian Acadmey we believe in the biblical principle, "Train up a child in the way he should go: and when he is old, he will not depart from it." (Proverbs 22:6) 
+              <br /> <br />Therefore we strive to instill in them biblical values as well as high quality education that will aid them in their growing and for the rest of their lives.
             </p>
             <div
               className={academyWisdomStyles.nextButton}
@@ -51,12 +49,12 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
         <div className={`${academyWisdomStyles.mainWrapper}`}>
           <div className={`${academyWisdomStyles.leftGrid}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
-            <h1>POINT NUMBER TWO</h1>
+            <h1>INTEGRITY</h1>
             <p className={academyWisdomStyles.description}>
-              The finalists for Best Awards 2021 have been announced and we are
-              so excited that our work for Youthforia made the list. We are
-              finalists in 5 categories - colour, photography, 3D, identity and
-              packaging. Winners are announced 8th October, wish us luck!
+            The righteous who walks in his integrity— blessed are his children after him! (Proverbs:207).
+            <br /><br />
+            We believe in the earthly and eternal rewards of integrity and that education cannot be complete without the study of God's word, 
+            therefore, our students not only taught the Word of God but also encouraged to learn for themselves the benefits of studying It and applying It to their lives.
             </p>
             <div
               className={academyWisdomStyles.nextButton}
@@ -75,12 +73,11 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
         <div className={`${academyWisdomStyles.mainWrapper}`}>
           <div className={`${academyWisdomStyles.leftGrid}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
-            <h1>POINT NUMBER THREE</h1>
+            <h1>EXCELLENCE</h1>
             <p className={academyWisdomStyles.description}>
-              The finalists for Best Awards 2021 have been announced and we are
-              so excited that our work for Youthforia made the list. We are
-              finalists in 5 categories - colour, photography, 3D, identity and
-              packaging. Winners are announced 8th October, wish us luck!
+              It is our goal at TSCA to do everything "... as for the Lord" (Colossians 3:23). With this in mind we continue to improve on the things we have been doing and prepare to adopt the ones we have not. 
+              <br /><br />
+              Not only is our focus that our students reecive a good education, but that they recive an excellent education. 
             </p>
             <div
               className={academyWisdomStyles.nextButton}

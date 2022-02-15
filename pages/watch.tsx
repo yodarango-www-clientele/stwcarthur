@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Footer from "../components/footer";
 import Menu from "../components/menu";
 import Archieves from "../layouts/archieves";
+import HeadTag from "../layouts/HeadTag";
 import Player from "../layouts/player";
 
 // styles
@@ -36,6 +37,7 @@ const Watch = ({ videoData }: any) => {
   return (
     <>
       {playerPopupState}
+      <HeadTag title={`STWC | Watch services online`} description={'Watch apostolic preaching online directly from Spirit and Truth Worship Center, Arthur TN'} ogUrl={`https://stwcarthur.org/watch`} key={'watch'}/>
       <div className={watchpageStyles.mainWrapper}>
         <Menu />
         {!archievesCompState && (

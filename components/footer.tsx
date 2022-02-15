@@ -13,6 +13,7 @@ const Footer = () => {
           href='https://www.xharcoal.com'
           target={`_blank`}
           rel={`noopener noreferrer`}
+          className={footerStyles.footerAtag}
         >
           Xharcoal
         </a>

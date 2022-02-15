@@ -5,6 +5,7 @@ import Link from "next/link";
 // components
 import Footer from "../components/footer";
 import Menu from "../components/menu";
+import HeadTag from "../layouts/HeadTag";
 
 // style
 import aboutMinistriesStyles from "../styles/pages/AboutTeam.module.css";
@@ -101,11 +102,11 @@ const AboutTeam = () => {
   const handleCurrentMinisterBig = (minister: number) => {
     if (minister === 0) {
       setcurrentBigPhotoState({ miracles: aboutMinistriesStyles.bigMiracles });
-    } else if (minister === 1) {
-      setcurrentBigPhotoState({ morgans: aboutMinistriesStyles.bigMorgans });
-    } else if (minister === 2) {
-      setcurrentBigPhotoState({ phipps: aboutMinistriesStyles.bigPhipps });
     } else if (minister === 3) {
+      setcurrentBigPhotoState({ morgans: aboutMinistriesStyles.bigMorgans });
+    } else if (minister === 1) {
+      setcurrentBigPhotoState({ phipps: aboutMinistriesStyles.bigPhipps });
+    } else if (minister === 2) {
       setcurrentBigPhotoState({ davis: aboutMinistriesStyles.bigDavis });
     }
     setnewMinisterState({
@@ -134,6 +135,7 @@ const AboutTeam = () => {
 
   return (
     <div className={aboutMinistriesStyles.mainWrapper}>
+      <HeadTag title={`STWC | What do we, as apostolics believe? `} description={'Are you wondering what the apostolic-penteostal doctrine teaches? We teach the bible, nothing but the bible. Take a read!'} ogUrl={`https://stwcarthur.org/about-team`} key={'about'}/>
       <Menu />
       <section className={aboutMinistriesStyles.grid}>
         <div
@@ -150,17 +152,17 @@ const AboutTeam = () => {
               className={aboutMinistriesStyles.miracles}
               onClick={() => handleMinisterSwitch(0)}
             ></div>
-            <div
+            {/* <div
               className={aboutMinistriesStyles.morgans}
+              onClick={() => handleMinisterSwitch(1)}
+            ></div> */}
+            <div
+              className={aboutMinistriesStyles.phipps}
               onClick={() => handleMinisterSwitch(1)}
             ></div>
             <div
-              className={aboutMinistriesStyles.phipps}
-              onClick={() => handleMinisterSwitch(2)}
-            ></div>
-            <div
               className={aboutMinistriesStyles.davis}
-              onClick={() => handleMinisterSwitch(3)}
+              onClick={() => handleMinisterSwitch(2)}
             ></div>
           </section>
         )}
@@ -172,24 +174,24 @@ const AboutTeam = () => {
             ></div>
           </div>
 
-          <div className={currentBigPhotoState.morgans}>
+          {/* <div className={currentBigPhotoState.morgans}>
             <div
               className={aboutMinistriesStyles.morgans}
               onClick={() => handleCurrentMinisterBig(1)}
             ></div>
-          </div>
+          </div> */}
 
           <div className={currentBigPhotoState.phipps}>
             <div
               className={aboutMinistriesStyles.phipps}
-              onClick={() => handleCurrentMinisterBig(2)}
+              onClick={() => handleCurrentMinisterBig(1)}
             ></div>
           </div>
 
           <div className={currentBigPhotoState.davis}>
             <div
               className={aboutMinistriesStyles.davis}
-              onClick={() => handleCurrentMinisterBig(3)}
+              onClick={() => handleCurrentMinisterBig(2)}
             ></div>
           </div>
         </section>

@@ -105,6 +105,7 @@
   line-height: 2em;
   text-align: justify;
   width: 95%;
+  min-height: 60vh;
   margin: var(--large-spacing-mobile) auto;
   animation: textUp 800ms ease-in;
 }
@@ -142,7 +143,7 @@
 }
 
 .miracles {
-  background-image: url("/images/God.png");
+  background-image: url("/images/miracles.jpeg");
 }
 
 .morgans {
@@ -153,7 +154,7 @@
   background-image: url("/images/living.png");
 }
 .davis {
-  background-image: url("/images/infinite.png");
+  background-image: url("/images/davis.JPG");
 }
 
 .ourStoryButton {
@@ -282,7 +283,7 @@
   }
 
   .ministersList div .miracles {
-    background-image: url("/images/God.png");
+    background-image: url("/images/miracles.jpeg");
   }
 
   .ministersList div .morgans {
@@ -293,7 +294,7 @@
     background-image: url("/images/living.png");
   }
   .ministersList div .davis {
-    background-image: url("/images/infinite.png");
+    background-image: url("/images/davis.JPG");
   }
 
   .ourStoryButton {
@@ -394,7 +395,7 @@
   }
 
   .ministersList div .miracles {
-    background-image: url("/images/God.png");
+    background-image: url("/images/miracles.jpeg");
   }
 
   .ministersList div .morgans {
@@ -405,7 +406,7 @@
     background-image: url("/images/living.png");
   }
   .ministersList div .davis {
-    background-image: url("/images/infinite.png");
+    background-image: url("/images/davis.JPG");
   }
 
   .ourStoryButton {
