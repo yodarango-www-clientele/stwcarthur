@@ -183,8 +183,8 @@
 .tscaAddWrapper {
   height: 40.625rem;
   width: 100%;
-  background-image: url("/images/tsca-bkg.png");
-  background-color: #F1F1F1; 
+  background-image: url("/images/TSCA_crest.png");
+  background-color: var(--secondary-color); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -204,6 +204,13 @@
   font: 800 3rem var(--main-font);
   width: 100%;
   padding: 0 0.5rem;
+}
+
+.tscaAddWrapper .tscaTitle{
+  font: 800 1.5rem var(--accent-font);
+  color: white;
+  text-align: center;
+  letter-spacing: .3em;
 }
 
 .wisdom {
@@ -237,7 +244,7 @@
   width: 90%;
   max-width: 31.25rem;
   height: 25rem;
-  background-image: url("/images/phone.jpeg");
+  background-image: url("/images/logo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -587,13 +594,20 @@
 
   /* =================== TSCA Section ================== */
   .tscaAddWrapper {
-    height: 62.5rem;
+    background-size: 28rem;
   }
 
   .tscaAddWrapper h2 {
     font: 800 7rem var(--main-font);
     line-height: 0.8em;
     padding: 0 2rem;
+  }
+
+  .tscaAddWrapper .tscaTitle{
+    font: 800 3rem var(--accent-font);
+    color: white;
+    text-align: center;
+    letter-spacing: .3em;
   }
 
   .stdButtonAcademy {

@@ -136,9 +136,10 @@ const Home: NextPage = () => {
 
         {!tscaModuleState && (
           <section className={`${homeStyles.tscaAddWrapper}`}>
-            <h2 className={`${homeStyles.wisdom}`}></h2>
+            <h2 className={`${homeStyles.tscaTitle}`}>TRI-STATE CHRISTIAN ACADEMY</h2>
+            {/* <h2 className={`${homeStyles.wisdom}`}></h2>
             <h2 className={`${homeStyles.integrity}`}></h2>
-            <h2 className={`${homeStyles.excellence}`}></h2>
+            <h2 className={`${homeStyles.excellence}`}></h2> */}
             <button
               className={`std-button ${homeStyles.stdButtonAcademy}`}
               onClick={showTSCAModule}
@@ -161,10 +162,10 @@ const Home: NextPage = () => {
           <div className={`${homeStyles.downloadTheApp}`}>
             <h2>DOWNLOAD THE APP</h2>
             <p>Give, watch our sermons, receive notifications & more </p>
-            <a href='' className={`std-button ${homeStyles.androidButton}`}>
+            <a href='#' className={`std-button ${homeStyles.androidButton}`}>
               ANDROID
             </a>
-            <a href='' className={`std-button ${homeStyles.iosButton}`}>
+            <a href='#' className={`std-button ${homeStyles.iosButton}`}>
               IOS
             </a>
           </div>

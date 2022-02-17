@@ -25,7 +25,7 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
     <>
       {currentModuleState === "first" && (
         <div className={`${academyWisdomStyles.mainWrapper}`}>
-          <div className={`${academyWisdomStyles.leftGrid}`}></div>
+          <div className={`${academyWisdomStyles.leftGrid} ${academyWisdomStyles.leftGridWisdom}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
             <h1>WISDOM</h1>
             <p className={academyWisdomStyles.description}>
@@ -47,7 +47,7 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
       )}
       {currentModuleState === "second" && (
         <div className={`${academyWisdomStyles.mainWrapper}`}>
-          <div className={`${academyWisdomStyles.leftGrid}`}></div>
+          <div className={`${academyWisdomStyles.leftGrid} ${academyWisdomStyles.leftGridIntegrity}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
             <h1>INTEGRITY</h1>
             <p className={academyWisdomStyles.description}>
@@ -71,7 +71,7 @@ const AcademyWisdom = ({ closeTscaModule }: academyWisdomProps) => {
       )}
       {currentModuleState === "third" && (
         <div className={`${academyWisdomStyles.mainWrapper}`}>
-          <div className={`${academyWisdomStyles.leftGrid}`}></div>
+          <div className={`${academyWisdomStyles.leftGrid} ${academyWisdomStyles.leftGridExcellence}`}></div>
           <div className={`${academyWisdomStyles.rightGrid}`}>
             <h1>EXCELLENCE</h1>
             <p className={academyWisdomStyles.description}>

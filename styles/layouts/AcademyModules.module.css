@@ -11,17 +11,26 @@
   position: relative;
   grid-column: 1/2;
   grid-row: 1/4;
-  background-image: url("/images/bells.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   width: 100%;
   opacity: 0.25;
   z-index: 1;
   animation: bkgAnimation 500ms ease-in;
 }
 
+.leftGridWisdom{
+  background-image: url("/images/tsca_wisdom.jpg");
+}
+
+.leftGridIntegrity{
+  background-image: url("/images/tsca_integrity.jpg");
+}
+
+.leftGridExcellence{
+  background-image: url("/images/tsca_escellence.jpg");
+}
 @keyframes bkgAnimation {
   0% {
     opacity: 0.15;
