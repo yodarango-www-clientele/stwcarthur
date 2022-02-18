@@ -6,8 +6,8 @@ const transporter = nodemailer.createTransport({
   secureConnection: false, // TLS requires secureConnection to be false
   port: 587, // port for secure SMTP
   auth:{
-  user: 'stwcarthur@outlook.com',
-  pass: '*EM6m41l777*'
+  user: process.env.EMAIL_USERNAME,
+  pass: process.env.EMAIL_PASSWORD
   }
 });
 
