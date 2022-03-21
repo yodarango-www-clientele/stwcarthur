@@ -1,5 +1,4 @@
-const nodemailer = require("nodemailer")
-import type { NextApiRequest, NextApiResponse } from "next";
+const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com", // hostname
