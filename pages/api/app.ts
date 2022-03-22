@@ -16,7 +16,7 @@ const dbConnection = async () => {
   
 dbConnection();
 
-export default async function getEvents(req: any, res: any) {
+export async function getEvents(req: any, res: any) {
 
     try {
         const events = await Event.find({}).sort({date: -1}).exec();
@@ -25,4 +25,15 @@ export default async function getEvents(req: any, res: any) {
 
         console.log(error)
     }
+}
+
+export async function getNotifications(req: any, res: any) {
+
+  try {
+      const notification = await Event.findOne({})
+      res.json(notification)
+  } catch (error) {
+
+      console.log(error)
+  }
 }
