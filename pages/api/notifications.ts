@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-import Event from "../../db/models/event"
+import Notification from "../../db/models/notification"
 
 const dbConnection = async () => {
     try {
@@ -19,7 +19,7 @@ dbConnection();
 export async function getNotifications(req: any, res: any) {
 
     try {
-        const notification = await Event.findOne({})
+        const notification = await Notification.findOne({})
         res.json(notification)
     } catch (error) {
   
