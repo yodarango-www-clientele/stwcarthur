@@ -16,7 +16,7 @@ const dbConnection = async () => {
   
 dbConnection();
 
-export async function getNotifications(req: any, res: any) {
+export default async function getNotifications(req: any, res: any) {
 
     try {
         const notification = await Notification.findOne({})
