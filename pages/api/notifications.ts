@@ -16,24 +16,13 @@ const dbConnection = async () => {
   
 dbConnection();
 
-export async function getEvents(req: any, res: any) {
-
-    try {
-        const events = await Event.find({}).sort({date: -1}).exec();
-        res.json(events)
-    } catch (error) {
-
-        console.log(error)
-    }
-}
-
 export async function getNotifications(req: any, res: any) {
 
-  try {
-      const notification = await Event.findOne({})
-      res.json(notification)
-  } catch (error) {
-
-      console.log(error)
+    try {
+        const notification = await Event.findOne({})
+        res.json(notification)
+    } catch (error) {
+  
+        console.log(error)
+    }
   }
-}
